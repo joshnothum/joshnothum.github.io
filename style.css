@@ -54,9 +54,10 @@ h3 {
 	margin-top: 30px;
 }
 .intro h5 a {
-	color: #fff;
+	color: #000;
 }
 .intro p {
+	margin-top: 0;
 	font-weight: 300;
 }
 
