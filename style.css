@@ -56,6 +56,9 @@ h3 {
 .intro h5 a {
 	color: #000;
 }
+.intro h5 a:hover {
+	color:#009688;
+}
 .intro p {
 	margin-top: 0;
 	margin-bottom: 10px;
