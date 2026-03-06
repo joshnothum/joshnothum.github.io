@@ -1,0 +1,180 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+---
+
+<Layout>
+  <main class="max-w-2xl mx-auto px-6 py-16">
+
+    <!-- HERO -->
+    <section class="flex items-center gap-8 mb-14 animate-in animate-delay-1">
+      <img
+        src="/img/new-profile.jpg"
+        alt="Josh Nothum"
+        class="w-32 h-32 rounded-full object-cover flex-shrink-0 ring-2 ring-teal-500/20"
+      />
+      <div>
+        <h1
+          id="typed-name"
+          class="text-3xl font-bold text-gray-900 leading-tight min-h-[2.25rem]"
+        ></h1>
+        <a
+          href="https://www.joshnothum.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-teal-600 text-sm font-medium hover:underline"
+        >joshnothum.dev</a>
+        <p class="text-gray-400 text-xs uppercase tracking-widest mt-1 font-medium">
+          Tempe, AZ
+        </p>
+        <a
+          href="mailto:joshnothum@gmail.com"
+          class="text-gray-500 text-sm hover:text-teal-600 transition-colors mt-1 inline-block"
+        >joshnothum@gmail.com</a>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="mb-12 animate-in animate-delay-2">
+      <p class="section-label">Experience</p>
+
+      <div class="space-y-8 mt-4">
+        <div class="card-entry">
+          <div class="flex justify-between items-baseline flex-wrap gap-1">
+            <div>
+              <h3 class="text-base font-semibold text-gray-900">RSM US</h3>
+              <h4 class="text-sm text-gray-600 font-medium">Sr. Data Analyst</h4>
+            </div>
+            <span class="date-badge">Apr 2022 – Present</span>
+          </div>
+          <ul class="mt-3 space-y-1.5 text-sm text-gray-500 font-light">
+            <li class="flex gap-2"><span class="text-teal-500 mt-0.5">▸</span>Create automated solutions for data extraction, analysis and visualizations</li>
+            <li class="flex gap-2"><span class="text-teal-500 mt-0.5">▸</span>Develop APIs for data sources to improve firmwide data connectivity</li>
+            <li class="flex gap-2"><span class="text-teal-500 mt-0.5">▸</span>Maintain and improve reporting and analytics processes</li>
+          </ul>
+        </div>
+
+        <div class="card-entry">
+          <div class="flex justify-between items-baseline flex-wrap gap-1">
+            <div>
+              <h3 class="text-base font-semibold text-gray-900">RSM US</h3>
+              <h4 class="text-sm text-gray-600 font-medium">Software Engineer</h4>
+            </div>
+            <span class="date-badge">Apr 2018 – Apr 2022</span>
+          </div>
+          <ul class="mt-3 space-y-1.5 text-sm text-gray-500 font-light">
+            <li class="flex gap-2"><span class="text-teal-500 mt-0.5">▸</span>Design, edit and deploy audit templates with CaseWare API</li>
+            <li class="flex gap-2"><span class="text-teal-500 mt-0.5">▸</span>Implement automated scripting solutions to test form functionality</li>
+            <li class="flex gap-2"><span class="text-teal-500 mt-0.5">▸</span>Use group source control software to maintain data integrity</li>
+            <li class="flex gap-2"><span class="text-teal-500 mt-0.5">▸</span>Collaborate with audit team to improve user experience</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="mb-12 animate-in animate-delay-3">
+      <p class="section-label">Education</p>
+      <div class="card-entry mt-4">
+        <div class="flex justify-between items-baseline flex-wrap gap-1">
+          <div>
+            <h3 class="text-base font-semibold text-gray-900">University of Missouri – St. Louis</h3>
+            <h4 class="text-sm text-gray-600 font-medium">Business Administration – Accounting</h4>
+          </div>
+          <span class="date-badge">May 2013</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="mb-12 animate-in animate-delay-4">
+      <p class="section-label">Skills</p>
+      <div class="flex flex-wrap gap-2 mt-4">
+        {[
+          "Python", "Alteryx", "Power BI",
+          "Angular", "Node.js", "SQL",
+          "Express", ".NET", "Git",
+        ].map((skill) => (
+          <span class="skill-chip">{skill}</span>
+        ))}
+      </div>
+    </section>
+
+    <!-- VOLUNTEER -->
+    <section class="animate-in animate-delay-5">
+      <p class="section-label">Volunteer</p>
+      <div class="card-entry mt-4">
+        <div class="flex justify-between items-baseline flex-wrap gap-1">
+          <div>
+            <h3 class="text-base font-semibold text-gray-900">Earthworms Podcast</h3>
+            <h4 class="text-sm text-gray-600 font-medium">Sound Engineer</h4>
+          </div>
+          <span class="date-badge">Apr 2016 – Nov 2017</span>
+        </div>
+        <ul class="mt-3 space-y-1.5 text-sm text-gray-500 font-light">
+          <li class="flex gap-2"><span class="text-teal-500 mt-0.5">▸</span>Audio production and publishing for a weekly environmental podcast</li>
+          <li class="flex gap-2"><span class="text-teal-500 mt-0.5">▸</span>Coordinate guest interviews</li>
+          <li class="flex gap-2"><span class="text-teal-500 mt-0.5">▸</span>Software: Pro Tools and Audio Hijack</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+</Layout>
+
+<style>
+  .section-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #009688;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0.4rem;
+  }
+
+  .card-entry {
+    border-left: 2px solid #e5e7eb;
+    padding-left: 1rem;
+    transition: border-color 0.2s;
+  }
+
+  .card-entry:hover {
+    border-left-color: #009688;
+  }
+
+  .date-badge {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  .skill-chip {
+    display: inline-block;
+    background: #f0fdfa;
+    color: #0f766e;
+    border: 1px solid #99f6e4;
+    border-radius: 9999px;
+    padding: 0.25rem 0.85rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+</style>
+
+<script>
+  import TypeIt from "typeit";
+
+  new TypeIt("#typed-name", {
+    speed: 60,
+    waitUntilVisible: true,
+    afterComplete: (instance) => {
+      instance.getElement().querySelector(".ti-cursor")?.remove();
+    },
+  })
+    .type("Josh Nothum")
+    .go();
+</script>

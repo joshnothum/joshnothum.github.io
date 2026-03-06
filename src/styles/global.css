@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #fafafa;
+    color: #1f2937;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.animate-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.animate-delay-2 { animation-delay: 0.25s; opacity: 0; }
+.animate-delay-3 { animation-delay: 0.4s; opacity: 0; }
+.animate-delay-4 { animation-delay: 0.55s; opacity: 0; }
+.animate-delay-5 { animation-delay: 0.7s; opacity: 0; }
+
+.ti-cursor {
+  color: #009688;
+}
